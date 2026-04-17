@@ -24,7 +24,7 @@
 <body class="min-h-screen flex flex-col items-center justify-center bg-gray-100 font-sans px-4">
 
     {{-- Judul --}}
-    <h1 class="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-5">
+    <h1 class="text-sm font-bold tracking-[0.25em] uppercase text-gray-500 mb-5">
         Login Smart Rapor
     </h1>
 
@@ -49,7 +49,7 @@
         </div>
 
         {{-- Form --}}
-        <form method="POST" action="{{ url('/login') }}">
+        <form method="GET" action="/dashboard">
             @csrf
 
             {{-- Username --}}
@@ -64,7 +64,7 @@
                     value="{{ old('username') }}"
                     autofocus
                     autocomplete="username"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition @error('username') border-red-400 @enderror"
+                    class="w-full border border-gray-400 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition @error('username') border-red-400 @enderror"
                 >
                 @error('username')
                     <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
@@ -81,7 +81,7 @@
                     id="password"
                     name="password"
                     autocomplete="current-password"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition @error('password') border-red-400 @enderror"
+                    class="w-full border border-gray-400 rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition @error('password') border-red-400 @enderror"
                 >
                 @error('password')
                     <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
@@ -95,7 +95,7 @@
                         Lupa sandi
                     </a>
                 @else
-                    <a href="#" class="text-sm text-gray-500 hover:underline hover:text-gray-700">
+                    <a href="/lupa_sandi" class="text-sm text-gray-500 hover:underline hover:text-gray-700">
                         Lupa sandi
                     </a>
                 @endif
@@ -113,6 +113,7 @@
                 type="submit"
                 class="w-full bg-[#4B5563] hover:bg-[#374151] active:bg-[#1F2937] text-white text-sm font-bold rounded-lg py-3 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
             >
+            <a href="{{url ('/dashboard')}}"></a>
                 Login
             </button>
 

@@ -2,11 +2,23 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
+// first page
 Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+// login
+Route::get('/login', [AuthController::class, 'showLogin']);
+
+// dashboard
+Route::get('/dashboard', [DashboardController::class, 'showDashboard']);
+
+// lupa sandi
+Route::get('/lupa_sandi', function () {
+    return view('lupa_sandi');
+});
+
