@@ -54,7 +54,7 @@
 
             {{-- Username --}}
             <div class="mb-4">
-                <label for="username" class="block text-sm font-medium text-gray-700 mb-1.5">
+                <label for="username" class="block text-sm font-semibold text-gray-700 mb-1.5">
                     Username
                 </label>
                 <input
@@ -73,7 +73,7 @@
 
             {{-- Password --}}
             <div class="mb-1">
-                <label for="password" class="block text-sm font-medium text-gray-700 mb-1.5">
+                <label for="password" class="block text-sm font-semibold text-gray-700 mb-1.5">
                     Password
                 </label>
                 <input
@@ -111,7 +111,7 @@
             {{-- Tombol Login --}}
             <button
                 type="submit"
-                class="w-full bg-[#4B5563] hover:bg-[#374151] active:bg-[#1F2937] text-white text-sm font-semibold rounded-lg py-3 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                class="w-full bg-[#4B5563] hover:bg-[#374151] active:bg-[#1F2937] text-white text-sm font-bold rounded-lg py-3 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
             >
                 Login
             </button>
