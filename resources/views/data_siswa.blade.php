@@ -17,6 +17,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
 
+    {{-- Font Awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         * {
             font-family: 'Inter', sans-serif;
@@ -67,65 +70,49 @@
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>NO</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>NIS</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>Nama</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>Tanggal Lahir</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>Jenis Kelamin</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>Kelas</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>Status</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors">
                                     <div class="flex items-center gap-2">
                                         <span>No. HP</span>
-                                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"/>
-                                        </svg>
+                                        <i class="fas fa-sort text-gray-600"></i>
                                     </div>
                                 </th>
                                 <th class="px-6 py-4 text-center text-sm font-bold text-gray-900 uppercase tracking-wider">Aksi</th>
