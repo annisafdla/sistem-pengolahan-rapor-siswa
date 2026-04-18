@@ -19,8 +19,7 @@
 
     {{-- Main Content --}}
     <main class="ml-56 min-h-screen p-6">
-        <h1 class="text-xl font-semibold text-gray-800">Dashboard</h1>
-        <p class="text-sm text-gray-500 mt-1">Selamat datang di Smart Rapor.</p>
+        <!-- content -->
     </main>
 
 </body>

@@ -15,10 +15,9 @@ Route::get('/', function () {
 Route::get('/login', [AuthController::class, 'showLogin']);
 
 // dashboard
-Route::get('/dashboard', [DashboardController::class, 'showDashboard']);
+Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
 
 // lupa sandi
 Route::get('/lupa_sandi', function () {
     return view('lupa_sandi');
 });
-
