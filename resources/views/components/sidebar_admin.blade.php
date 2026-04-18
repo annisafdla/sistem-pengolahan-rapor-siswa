@@ -1,4 +1,22 @@
 {{-- resources/views/components/sidebar.blade.php --}}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+    
+    * {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+        font-weight: 600;
+    }
+    
+    body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        letter-spacing: -0.3px;
+    }
+</style>
+
 <aside id="sidebar" class="fixed top-0 left-0 z-50 flex flex-col w-48 min-h-screen bg-gray-50 border-r border-gray-200">
 
     {{-- Logo --}}
@@ -142,13 +160,16 @@
     </nav>
 
     {{-- Logout --}}
-    <div class="p-2 border-t border-gray-200">
+    <div class="p-3 border-t border-gray-200">
         <form method="POST" action="/logout">
             @csrf
             <button type="submit"
-                    class="w-full px-3 py-2 text-xs font-medium text-gray-600 bg-gray-300 rounded
-                           hover:bg-gray-400 hover:text-gray-700 transition-all duration-150 cursor-pointer">
-                Logout
+                    class="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-red-600 rounded-lg
+                           hover:bg-red-700 active:bg-red-800 transition-all duration-150 cursor-pointer shadow-sm hover:shadow-md">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+                </svg>
+                <span>Logout</span>
             </button>
         </form>
     </div>
