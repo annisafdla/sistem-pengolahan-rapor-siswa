@@ -20,11 +20,6 @@
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
 </head>
 <body class="bg-gray-50">
 

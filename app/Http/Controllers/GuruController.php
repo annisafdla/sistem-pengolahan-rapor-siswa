@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class GuruController extends Controller
 {
-    //
+    public function showGuru() {
+        return view('data_guru');
+    }
 }

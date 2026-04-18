@@ -61,15 +61,15 @@
                                    {{ request()->is('data_siswa') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Data Siswa
                 </a>
-                <a href="#" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                <a href="data_guru" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
                                    {{ request()->is('data_guru') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Data Guru
                 </a>
-                <a href="#" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                <a href="data_kelas" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
                                    {{ request()->is('data_kelas') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Data Kelas
                 </a>
-                <a href="#" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                <a href="data_mapel" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
                                    {{ request()->is('data_mapel') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Data Mapel
                 </a>
@@ -78,10 +78,10 @@
 
 
         {{-- Akademik (Dropdown) --}}
-        <div class="px-2" x-data="{ open: {{ request()->is('akademik/pengampu') || request()->is('akademik/jadwal') ? 'true' : 'false' }} }">
+        <div class="px-2" x-data="{ open: {{ request()->is('pengampu') || request()->is('rekap_nilai') ? 'true' : 'false' }} }">
             <button @click="open = !open"
                     class="flex items-center gap-3 w-full px-3 py-2 rounded text-xs font-medium transition-all duration-150
-                           {{ request()->is('akademik/pengampu') || request()->is('akademik/jadwal')
+                           {{ request()->is('pengampu') || request()->is('rekap_nilai')
                               ? 'bg-gray-900 text-white font-bold'
                               : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900' }}">
                 <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
@@ -100,12 +100,12 @@
                  x-transition:enter-start="opacity-0 -translate-y-1"
                  x-transition:enter-end="opacity-100 translate-y-0"
                  class="mt-0.5 ml-4 pl-3 border-l-2 border-gray-200 space-y-0.5">
-                <a href="#" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
-                                   {{ request()->is('akademik/pengampu') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
+                <a href="pengampu" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                                   {{ request()->is('pengampu') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Pengampu
                 </a>
-                <a href="#" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
-                                   {{ request()->is('akademik/jadwal') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
+                <a href="rekap_nilai" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                                   {{ request()->is('rekap_nilai') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Rekap Nilai
                 </a>
             </div>
@@ -113,9 +113,9 @@
 
         {{-- Rapor --}}
         <div class="px-2 mb-0.5">
-            <a href="#"
+            <a href="data_rapor"
                class="flex items-center gap-3 px-3 py-2 rounded text-xs font-medium transition-all duration-150
-                      {{ request()->is('rapor')
+                      {{ request()->is('data_rapor')
                          ? 'bg-gray-900 text-white font-bold'
                          : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900' }}">
                 <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
@@ -127,9 +127,9 @@
 
         {{-- Ubah Kata Sandi --}}
         <div class="px-2">
-            <a href="/lupa_sandi"
+            <a href="ubah_kata_sandi"
                class="flex items-center gap-3 px-3 py-2 rounded text-xs font-medium transition-all duration-150
-                      {{ request()->is('lupa_sandi')
+                      {{ request()->is('ubah_kata_sandi')
                          ? 'bg-gray-900 text-white font-bold'
                          : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900' }}">
                 <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
