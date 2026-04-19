@@ -21,5 +21,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Seed the core data
+        $this->call([
+            GuruSeeder::class,
+            MapelSeeder::class,
+            KelasSeeder::class,
+            PengampuSeeder::class,
+        ]);
     }
 }
