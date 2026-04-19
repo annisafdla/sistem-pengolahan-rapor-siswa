@@ -29,11 +29,6 @@
     {{-- Main Content --}}
     <main class="ml-48 min-h-screen bg-gray-50 p-6">
         <div class="max-w-full">
-            {{-- Page Header --}}
-            <div class="mb-6">
-                <h1 class="text-3xl font-bold text-gray-900">Rekap Nilai</h1>
-                <p class="text-gray-600 mt-1">Kelola dan lihat rekapan nilai seluruh siswa</p>
-            </div>
 
             {{-- Card Container --}}
             <div class="bg-white rounded-lg shadow-sm border border-gray-200">
@@ -58,6 +53,12 @@
                                 <option>Kelas X</option>
                                 <option>Kelas XI</option>
                                 <option>Kelas XII</option>
+                            </select>
+                            <select class="px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white hover:border-gray-400">
+                                <option>Filter Mapel</option>
+                                <option>Matematika</option>
+                                <option>Bahasa Indonesia</option>
+                                <option>Bahasa Inggris</option>
                             </select>
                         </div>
                     </div>
@@ -286,20 +287,23 @@
                     </table>
                 </div>
 
-                {{-- Pagination --}}
-                <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
-                    <p class="text-sm text-gray-600">Menampilkan 1 hingga 8 dari 124 data</p>
+                <div class="px-6 py-4 border-t border-gray-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-gray-50">
+                    <span class="text-sm text-gray-600 font-medium">Menampilkan <span class="text-gray-900 font-bold">1 - 8</span> dari <span class="text-gray-900 font-bold">124</span> data</span>
+                    
                     <div class="flex items-center gap-2">
-                        <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                            ← Sebelumnya
-                        </button>
-                        <button class="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">1</button>
-                        <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">2</button>
-                        <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">3</button>
-                        <span class="px-3 py-2 text-sm text-gray-600">...</span>
-                        <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
-                            Selanjutnya →
-                        </button>
+                        <button class="p-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg><span>Lihat</span></button>
+                        
+                        <div class="flex items-center gap-1">
+                            <button class="px-3 py-2 text-sm font-semibold text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-all shadow-sm">1</button>
+                        </div>
+                        
+                        <button class="p-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg><span>Lihat</span></button>
                     </div>
                 </div>
             </div>

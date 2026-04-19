@@ -29,11 +29,6 @@
     {{-- Main Content --}}
     <main class="ml-48 min-h-screen bg-gray-50 p-6">
         <div class="max-w-full">
-            {{-- Page Header --}}
-            <div class="mb-6">
-                <h1 class="text-3xl font-bold text-gray-900">Data Rapor</h1>
-                <p class="text-gray-600 mt-1">Kelola dan export rapor siswa</p>
-            </div>
 
             {{-- Card Container --}}
             <div class="bg-white rounded-lg shadow-sm border border-gray-200">

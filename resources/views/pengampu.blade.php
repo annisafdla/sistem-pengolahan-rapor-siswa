@@ -176,6 +176,7 @@
                     </div>
                 </div>
             </div>
+            <!-- form -->
             <div 
 x-show="openTambah"
 class="fixed inset-0 flex items-center justify-center bg-black/40"
