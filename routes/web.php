@@ -12,6 +12,9 @@ use App\Http\Controllers\MapelController;
 use App\Http\Controllers\RekapnilaiController;
 use App\Http\Controllers\RaporController;
 use App\Http\Controllers\PengampuController;
+use App\Http\Controllers\InputNilaiController;
+use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\UbahKataSandiController;
 
 // first page
 Route::get('/', function () {
@@ -37,6 +40,12 @@ Route::get('/rekap_nilai', [RekapnilaiController::class, 'showRekapNilai'])->nam
 Route::get('/data_rapor', [RaporController::class, 'showRapor'])->name('data_rapor');
 // pengampu
 Route::get('/pengampu', [PengampuController::class, 'showPengampu'])->name('pengampu');
+// input nilai
+Route::get('/input_nilai', [InputNilaiController::class, 'showInputNilai'])->name('input_nilai');
+// presensi
+Route::get('/presensi', [PresensiController::class, 'showPresensi'])->name('presensi');
+// ubah kata sandi
+Route::get('/ubah_kata_sandi', [UbahKataSandiController::class, 'showUbahKataSandi'])->name('ubah_kata_sandi');
 
 // lupa sandi
 Route::get('/lupa_sandi', function () {
