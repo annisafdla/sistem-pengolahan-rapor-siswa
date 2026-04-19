@@ -31,8 +31,6 @@ Route::get('/data_guru', [GuruController::class, 'showGuru'])->name('data_guru')
 Route::get('/data_kelas', [KelasController::class, 'showKelas'])->name('data_kelas');
 // mapel
 Route::get('/data_mapel', [MapelController::class, 'showMapel'])->name('data_mapel');
-// rekap nilai
-Route::get('/rekap_nilai', [RekapnilaiController::class, 'showRekapNilai'])->name('rekap_nilai');
 // rapor
 Route::get('/data_rapor', [RaporController::class, 'showRapor'])->name('data_rapor');
 // pengampu
@@ -42,3 +40,18 @@ Route::get('/pengampu', [PengampuController::class, 'showPengampu'])->name('peng
 Route::get('/lupa_sandi', function () {
     return view('lupa_sandi');
 });
+
+// ubah kata sandi
+Route::get('/ubah_kata_sandi', function () {
+    return view('ubah_kata_sandi');
+});
+
+Route::put('/password/update', function () {
+    return back()->with('status', 'Kata sandi berhasil diperbarui!');
+})->name('password.update');
+
+//tambah pengampu
+Route::resource('pengampu', PengampuController::class);
+
+// rekap nilai
+Route::view('/rekap_nilai','rekap_nilai');

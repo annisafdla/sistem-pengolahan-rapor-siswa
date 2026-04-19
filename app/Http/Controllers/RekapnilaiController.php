@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class RekapnilaiController extends Controller
+class RekapNilaiController extends Controller
 {
-    public function showRekapNilai() {
-        return view('rekap_nilai');
-    }
+    public function index()
+{
+
+    return view('admin.rekap_nilai', compact(
+        'rekap',
+        'kelas'
+    ));
+}
 }

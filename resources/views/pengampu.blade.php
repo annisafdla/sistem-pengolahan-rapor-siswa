@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50" x-data="{ openTambah:false }">
 
     {{-- Sidebar --}}
     @include('components.sidebar_admin')
@@ -53,12 +53,12 @@
                                 <option>Tidak Aktif</option>
                             </select>
                             
-                            <button class="px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 active:bg-gray-700 transition-all flex items-center gap-2 whitespace-nowrap shadow-sm hover:shadow-md">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-                                </svg>
-                                <span>Tambah</span>
-                            </button>
+                            <button 
+    @click="openTambah = true"
+    class="px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-lg">
+
+    Tambah
+</button>
                         </div>
                     </div>
                 </div>
@@ -173,6 +173,87 @@
                     </div>
                 </div>
             </div>
+            <div 
+x-show="openTambah"
+class="fixed inset-0 flex items-center justify-center bg-black/40"
+>
+
+<div class="bg-white w-full max-w-lg rounded-xl p-6">
+
+<h2 class="text-lg font-semibold mb-4">
+Tambah Pengampu
+</h2>
+
+<form action="{{ route('pengampu.store') }}" method="POST">
+@csrf
+
+<div class="space-y-4">
+
+<div>
+<label>Nama Mapel</label>
+<select name="mapel_id" class="w-full border rounded p-2">
+
+@foreach($mapels as $mapel)
+<option value="{{ $mapel->id }}">
+{{ $mapel->nama_mapel }}
+</option>
+@endforeach
+
+</select>
+</div>
+
+<div>
+<label>Minimum KKM</label>
+<input type="number" name="minimum_kkm" class="w-full border rounded p-2">
+</div>
+
+<div>
+<label>Guru</label>
+<select name="guru_id" class="w-full border rounded p-2">
+
+@foreach($gurus as $guru)
+<option value="{{ $guru->id }}">
+{{ $guru->nama_guru }}
+</option>
+@endforeach
+
+</select>
+</div>
+
+<div>
+<label>Kelas</label>
+<select name="kelas_id" class="w-full border rounded p-2">
+
+@foreach($kelas as $k)
+<option value="{{ $k->id }}">
+{{ $k->nama_kelas }}
+</option>
+@endforeach
+
+</select>
+</div>
+
+</div>
+
+<div class="flex justify-end gap-2 mt-6">
+
+<button type="button"
+@click="openTambah=false"
+class="px-4 py-2 bg-gray-300 rounded">
+Batal
+</button>
+
+<button type="submit"
+class="px-4 py-2 bg-gray-900 text-white rounded">
+Tambah
+</button>
+
+</div>
+
+</form>
+
+</div>
+</div>
         </div>
     </main>
 

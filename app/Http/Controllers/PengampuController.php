@@ -18,4 +18,28 @@ class PengampuController extends Controller
         
         return view('pengampu', compact('pengampus', 'gurus', 'mapels', 'kelas'));
     }
+    public function index()
+{
+    $pengampus = Pengampu::all();
+    $mapels = Mapel::all();
+    $gurus = Guru::all();
+    $kelas = Kelas::all();
+
+    return view('pengampu', compact(
+        'pengampus',
+        'mapels',
+        'gurus',
+        'kelas'
+    ));
+}
+public function store(Request $request)
+{
+    Pengampu::create([
+        'mapel_id' => $request->mapel_id,
+        'guru_id' => $request->guru_id,
+        'kelas_id' => $request->kelas_id
+    ]);
+
+    return redirect()->back();
+}
 }
