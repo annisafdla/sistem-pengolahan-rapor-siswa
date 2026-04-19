@@ -108,7 +108,6 @@
                                         <span>Tahun Ajaran</span>
                                     </div>
                                 </th>
-                                <th class="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">Status</th>
                                 <th class="px-6 py-4 text-center text-xs font-bold text-white uppercase tracking-wider">Aksi</th>
                             </tr>
                         </thead>
@@ -124,13 +123,6 @@
                                 <td class="px-6 py-4 text-sm text-gray-900 font-medium">{{ $p->guru->nama_guru }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-700">{{ $p->kelas->nama_kelas }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-600">{{ $p->tahun_ajaran }}</td>
-                                <td class="px-6 py-4 text-sm">
-                                    @if($p->status === 'Aktif')
-                                        <span class="px-3 py-1.5 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Aktif</span>
-                                    @else
-                                        <span class="px-3 py-1.5 bg-red-100 text-red-700 rounded-full text-xs font-semibold">Tidak Aktif</span>
-                                    @endif
-                                </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex items-center justify-center gap-2 flex-wrap">
                                         <button title="Lihat Detail" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded-lg transition-all duration-150 shadow-sm hover:shadow-md">
@@ -151,7 +143,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="9" class="px-6 py-8 text-center text-gray-500">
+                                <td colspan="8" class="px-6 py-8 text-center text-gray-500">
                                     <svg class="w-12 h-12 mx-auto mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                                     </svg>
@@ -163,13 +155,24 @@
                     </table>
                 </div>
 
-                {{-- Footer with pagination info --}}
-                <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between text-sm text-gray-600">
-                    <div>Menampilkan 1 - {{ min(count($pengampus), 20) }} dari {{ count($pengampus) }} data</div>
+                {{-- Pagination Footer --}}
+                <div class="px-6 py-4 border-t border-gray-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-gray-50">
+                    <span class="text-sm text-gray-600 font-medium">Menampilkan <span class="text-gray-900 font-bold">1 - 20</span> dari <span class="text-gray-900 font-bold">{{ count($pengampus) }}</span> data</span>
+                    
                     <div class="flex items-center gap-2">
-                        <button class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-50 transition-colors">←</button>
-                        <span class="px-3 py-1 bg-blue-600 text-white rounded">1</span>
-                        <button class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-50 transition-colors">→</button>
+                        <button class="p-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg><span>Lihat</span></button>
+                        
+                        <div class="flex items-center gap-1">
+                            <button class="px-3 py-2 text-sm font-semibold text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-all shadow-sm">1</button>
+                        </div>
+                        
+                        <button class="p-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg><span>Lihat</span></button>
                     </div>
                 </div>
             </div>

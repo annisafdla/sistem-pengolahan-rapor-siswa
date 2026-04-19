@@ -12,6 +12,9 @@ use App\Http\Controllers\MapelController;
 use App\Http\Controllers\RekapnilaiController;
 use App\Http\Controllers\RaporController;
 use App\Http\Controllers\PengampuController;
+use App\Http\Controllers\InputNilaiController;
+use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\UbahKataSandiController;
 
 // first page
 Route::get('/', function () {
@@ -35,7 +38,8 @@ Route::get('/data_mapel', [MapelController::class, 'showMapel'])->name('data_map
 Route::get('/data_rapor', [RaporController::class, 'showRapor'])->name('data_rapor');
 // pengampu
 Route::get('/pengampu', [PengampuController::class, 'showPengampu'])->name('pengampu');
-
+// input nilai
+Route::get('/input_nilai', [InputNilaiController::class, 'showInputNilai'])->name('input_nilai');
 // lupa sandi
 Route::get('/lupa_sandi', function () {
     return view('lupa_sandi');
@@ -44,14 +48,14 @@ Route::get('/lupa_sandi', function () {
 // ubah kata sandi
 Route::get('/ubah_kata_sandi', function () {
     return view('ubah_kata_sandi');
-});
+})->name('ubah_kata_sandi');
 
 Route::put('/password/update', function () {
     return back()->with('status', 'Kata sandi berhasil diperbarui!');
 })->name('password.update');
 
-//tambah pengampu
+// tambah pengampu
 Route::resource('pengampu', PengampuController::class);
 
 // rekap nilai
-Route::view('/rekap_nilai','rekap_nilai');
+Route::get('/rekap_nilai', [RekapnilaiController::class, 'showRekapNilai'])->name('rekap_nilai');

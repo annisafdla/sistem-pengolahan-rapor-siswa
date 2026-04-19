@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Smart Rapor — Ubah Kata Sandi</title>
 
     {{-- Google Fonts - Inter --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+=======
+    <title>Smart Rapor — Dashboard</title>
+>>>>>>> 90589c546130addd64377734b33bfee4a4f4cb9f
 
     {{-- Tailwind CSS --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,10 +20,13 @@
     {{-- Alpine.js --}}
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+<<<<<<< HEAD
 
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+=======
+>>>>>>> 90589c546130addd64377734b33bfee4a4f4cb9f
 </head>
 <body class="bg-gray-50">
 
@@ -27,6 +34,7 @@
     @include('components.sidebar_admin')
 
     {{-- Main Content --}}
+<<<<<<< HEAD
     <main class="ml-48 min-h-screen bg-gray-50 p-6">
         <div class="max-w-2xl">
             {{-- Page Header --}}
@@ -272,3 +280,11 @@
 
 </body>
 </html>
+=======
+    <main class="ml-56 min-h-screen p-6">
+        <!-- content -->
+    </main>
+
+</body>
+</html>
+>>>>>>> 90589c546130addd64377734b33bfee4a4f4cb9f
