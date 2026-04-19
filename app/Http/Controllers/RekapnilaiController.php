@@ -9,6 +9,11 @@ use App\Models\User;
 class RekapNilaiController extends Controller
 {
     public function showRekapNilai() {
-        return view('rekap_nilai');
+        // Ambil semua mata pelajaran dari database
+        $mapels = Mapel::all();
+        
+        return view('rekap_nilai', [
+            'mapels' => $mapels
+        ]);
     }
 }
