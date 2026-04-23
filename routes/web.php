@@ -44,6 +44,7 @@ Route::get('/input_nilai', [InputNilaiController::class, 'showInputNilai'])->nam
 Route::get('/lupa_sandi', function () {
     return view('lupa_sandi');
 });
+Route::get('/presensi', [PresensiController::class, 'showPresensi'])->name('presensi');
 
 // ubah kata sandi
 Route::get('/ubah_kata_sandi', function () {

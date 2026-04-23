@@ -96,10 +96,10 @@
 
 
         {{-- Akademik (Dropdown) --}}
-        <div class="px-2" x-data="{ open: {{ request()->is('pengampu') || request()->is('rekap_nilai') ? 'true' : 'false' }} }">
+        <div class="px-2" x-data="{ open: {{ request()->is('pengampu') || request()->is('rekap_nilai') || request()->is('input_nilai') || request()->is('presensi') ? 'true' : 'false' }} }">
             <button @click="open = !open"
                     class="flex items-center gap-3 w-full px-3 py-2 rounded text-xs font-medium transition-all duration-150
-                           {{ request()->is('pengampu') || request()->is('rekap_nilai')
+                           {{ request()->is('pengampu') || request()->is('rekap_nilai') || request()->is('input_nilai') || request()->is('presensi')
                               ? 'bg-gray-900 text-white font-bold'
                               : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900' }}">
                 <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
@@ -125,6 +125,14 @@
                 <a href="rekap_nilai" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
                                    {{ request()->is('rekap_nilai') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
                     Rekap Nilai
+                </a>
+                 <a href="input_nilai" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                                   {{ request()->is('input_nilai') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
+                    Input nilai
+                </a>
+                 <a href="presensi" class="block px-3 py-1.5 text-xs font-medium rounded transition-colors
+                                   {{ request()->is('presensi') ? 'bg-gray-900 text-white font-bold' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800' }}">
+                    Presensi
                 </a>
             </div>
         </div>
