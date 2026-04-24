@@ -16,7 +16,7 @@ class PengampuController extends Controller
         $mapels = Mapel::where('status', 'Aktif')->get();
         $kelas = Kelas::where('status', 'Aktif')->get();
         
-        return view('pengampu', compact('pengampus', 'gurus', 'mapels', 'kelas'));
+        return view('pages.pengampu', compact('pengampus', 'gurus', 'mapels', 'kelas'));
     }
     public function index()
 {

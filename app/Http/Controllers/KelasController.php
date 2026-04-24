@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class KelasController extends Controller
 {
     public function showKelas() {
-        return view('data_kelas');
+        return view('pages.data_kelas');
     }
 }

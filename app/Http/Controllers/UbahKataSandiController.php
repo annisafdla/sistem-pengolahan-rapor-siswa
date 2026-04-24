@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class UbahKataSandiController extends Controller
 {
     public function showUbahKataSandi() {
-        return view('ubah_kata_sandi');
+        return view('pages.ubah_kata_sandi');
     }
 }

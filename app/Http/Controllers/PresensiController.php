@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PresensiController extends Controller
 {
     public function showPresensi() {
-        return view('presensi');
+        return view('pages.presensi');
     }
 }

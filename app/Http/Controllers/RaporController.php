@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RaporController extends Controller
 {
     public function showRapor() {
-        return view('data_rapor');
+        return view('pages.data_rapor');
     }
 }

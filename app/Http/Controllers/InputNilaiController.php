@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class InputNilaiController extends Controller
 {
     public function showInputNilai() {
-        return view('input_nilai');
+        return view('pages.input_nilai');
     }
 }

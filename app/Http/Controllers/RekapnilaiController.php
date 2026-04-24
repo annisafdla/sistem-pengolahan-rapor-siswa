@@ -12,7 +12,7 @@ class RekapNilaiController extends Controller
         // Ambil semua mata pelajaran dari database
         $mapels = Mapel::all();
         
-        return view('rekap_nilai', [
+        return view('pages.rekap_nilai', [
             'mapels' => $mapels
         ]);
     }
